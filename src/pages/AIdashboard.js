@@ -78,7 +78,7 @@ const AIDashboard = () => {
 
   const fetchAreaName = async (lat, lng) => {
     const apiKey = 'a765827074be4fe1826ddc54d42af795';
-    const url = https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${apiKey};
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${apiKey}`;
 
     try {
       const response = await fetch(url);
@@ -138,7 +138,7 @@ const AIDashboard = () => {
                 onClick={handleRefresh}
                 className="bg-primary hover:bg-primary-dark text-white px-2 md:px-3 py-1 rounded-md flex items-center text-xs md:text-sm"
               >
-                <ArrowPathIcon className={h-3 w-3 md:h-4 md:w-4 mr-1 ${isRefreshing ? 'animate-spin' : ''}} />
+                <ArrowPathIcon className={`h-3 w-3 md:h-4 md:w-4 mr-1 ${isRefreshing ? 'animate-spin' : ''}`} />
                 Refresh
               </button>
             </div>
