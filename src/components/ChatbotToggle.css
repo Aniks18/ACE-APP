@@ -1,39 +1,50 @@
 /* ChatbotToggle.css */
 .chatbot-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .toggle-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .toggle-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .chatbot-wrapper {
-    position: fixed;
-    bottom: 0;
-    right: 20px;
-    width: 300px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-  }
-  
-  .chatbot-wrapper.open {
-    max-height: 500px; /* Adjust this to the height of your chatbot */
-  }
-  
-  .chatbot-wrapper.closed {
-    max-height: 0;
-  }
-  
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.toggle-button {
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Reduced padding to make the button smaller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular button */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 60px;  /* Reduced width */
+  height: 60px; /* Reduced height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.robot-logo {
+  width: 40px;  /* Reduced image size */
+  height: 40px; /* Reduced image size */
+  border-radius: 50%;
+}
+
+.chatbot-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 400px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.chatbot-wrapper.open {
+  max-height: 600px;
+}
+
+.chatbot-wrapper.closed {
+  max-height: 0;
+}
