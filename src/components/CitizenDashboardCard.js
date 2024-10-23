@@ -23,7 +23,7 @@ const CitizenDashboardCard = ({ citizenId }) => {
 
   useEffect(() => {
     if (data && data.citizens_by_pk) {
-      setQrValue(`http://localhost:3000/card/${data.citizens_by_pk.id}`);
+      setQrValue(`https://swasthya-setu-chi.vercel.app/card/${data.citizens_by_pk.id}`);
     }
   }, [data]);
 
