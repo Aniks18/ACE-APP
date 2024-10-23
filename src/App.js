@@ -21,6 +21,8 @@ import HealthRecordCard from './pages/HealthReportCard';
 import ChatbotToggle from './components/ChatbotToggle';
 import AddHospital from './pages/addHospital'; // Add this import
 import emailjs from '@emailjs/browser';
+import MentalBot from './pages/mentalbot';
+
 emailjs.init("w-BPtYL_WIabHlHsv");
 
 function App() {
@@ -42,6 +44,7 @@ function App() {
                 <Route path="/card/:id" element={<HealthRecordCard />} />
                 <Route path="/ai-dashboard" element={<AIDashboard />} />
                 <Route path="/symptom-predictor" element={<SymptomPredictor />} />
+                <Route path="/mentalbot" element ={<MentalBot />}/>
                 <Route
                   path="/dashboard"
                   element={
