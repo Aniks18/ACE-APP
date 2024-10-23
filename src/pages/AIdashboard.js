@@ -211,7 +211,7 @@ const AIDashboard = () => {
                 <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
                   <h2 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
                     <Activity className="h-5 w-5 md:h-6 md:w-6 mr-2 text-primary" />
-                    Symptom Analysis
+                    Symptom Analyzer With Medicine Reccomendation Bot
                   </h2>
                   <SymptomAnalyzer />
                 </div>
