@@ -31,6 +31,7 @@ const AIDashboard = () => {
   const [selectedDisease, setSelectedDisease] = useState('Malaria');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const tabs = [
     { id: 'overview', name: 'Overview', icon: Activity },
@@ -38,6 +39,16 @@ const AIDashboard = () => {
     { id: 'hospitals', name: 'Healthcare', icon: Building2 },
     { id: 'statistics', name: 'Disease Statistics', icon: Brain },
   ];
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const requestLocation = useCallback(() => {
     setIsRefreshing(true);
@@ -67,7 +78,7 @@ const AIDashboard = () => {
 
   const fetchAreaName = async (lat, lng) => {
     const apiKey = 'a765827074be4fe1826ddc54d42af795';
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${apiKey}`;
+    const url = https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${apiKey};
 
     try {
       const response = await fetch(url);
@@ -111,23 +122,23 @@ const AIDashboard = () => {
       {/* Header */}
       <div className="bg-white shadow-md">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-3">
-              <Stethoscope className="h-8 w-8 text-primary" />
-              <h1 className="text-3xl font-bold text-primary">AI Health Dashboard</h1>
+              <Stethoscope className="h-6 w-6 md:h-8 md:w-8 text-primary" />
+              <h1 className="text-xl md:text-3xl font-bold text-primary">AI Health Dashboard</h1>
             </div>
             <div className="flex items-center space-x-4">
               {location && !location.error && (
-                <span className="text-sm text-gray-600 flex items-center">
-                  <Map className="h-4 w-4 mr-1" />
+                <span className="text-xs md:text-sm text-gray-600 flex items-center">
+                  <Map className="h-3 w-3 md:h-4 md:w-4 mr-1" />
                   {areaName?.split(',')[0]}
                 </span>
               )}
               <button 
                 onClick={handleRefresh}
-                className="bg-primary hover:bg-primary-dark text-white px-3 py-1 rounded-md flex items-center text-sm"
+                className="bg-primary hover:bg-primary-dark text-white px-2 md:px-3 py-1 rounded-md flex items-center text-xs md:text-sm"
               >
-                <ArrowPathIcon className={`h-4 w-4 mr-1 ${isRefreshing ? 'animate-spin' : ''}`} />
+                <ArrowPathIcon className={h-3 w-3 md:h-4 md:w-4 mr-1 ${isRefreshing ? 'animate-spin' : ''}} />
                 Refresh
               </button>
             </div>
@@ -138,16 +149,18 @@ const AIDashboard = () => {
       {/* Location Alert */}
       {location && !location.error && (
         <div className="container mx-auto px-4 py-4">
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm">
-            <div className="flex justify-between items-start">
+          <div className="bg-blue-50 border-l-4 border-blue-500 p-3 md:p-4 rounded-lg shadow-sm">
+            <div className="flex flex-col md:flex-row justify-between items-start space-y-2 md:space-y-0">
               <div>
-                <p className="font-bold text-blue-700 flex items-center">
-                  <Map className="h-5 w-5 mr-2" />
+                <p className="font-bold text-blue-700 flex items-center text-sm md:text-base">
+                  <Map className="h-4 w-4 md:h-5 md:w-5 mr-2" />
                   Current Location
                 </p>
-                <p className="text-blue-600 mt-1">Lat: {location.latitude.toFixed(4)}, Long: {location.longitude.toFixed(4)}</p>
+                <p className="text-blue-600 mt-1 text-xs md:text-sm">
+                  Lat: {location.latitude.toFixed(4)}, Long: {location.longitude.toFixed(4)}
+                </p>
                 {areaName && (
-                  <p className="text-blue-600 mt-1">
+                  <p className="text-blue-600 mt-1 text-xs md:text-sm">
                     <span className="font-semibold">Area:</span> {areaName}
                   </p>
                 )}
@@ -159,21 +172,21 @@ const AIDashboard = () => {
 
       {/* Navigation Tabs */}
       <div className="container mx-auto px-4 py-4">
-        <nav className="flex space-x-2 bg-white p-1 rounded-lg shadow-sm">
+        <nav className="flex flex-wrap gap-2 bg-white p-1 rounded-lg shadow-sm">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 flex items-center justify-center space-x-2 px-4 py-2 rounded-md transition-all duration-200 ${
+                className={`flex-1 min-w-[120px] flex items-center justify-center space-x-2 px-2 md:px-4 py-2 rounded-md transition-all duration-200 text-xs md:text-sm ${
                   activeTab === tab.id
                     ? 'bg-primary text-white shadow-md'
                     : 'text-gray-600 hover:bg-gray-50'
                 }`}
               >
-                <Icon className="h-5 w-5" />
-                <span className="font-medium">{tab.name}</span>
+                <Icon className="h-4 w-4 md:h-5 md:w-5" />
+                <span className="font-medium">{isMobile ? tab.name.split(' ')[0] : tab.name}</span>
               </button>
             );
           })}
@@ -187,17 +200,17 @@ const AIDashboard = () => {
           {activeTab === 'overview' && (
             <>
               {/* AI Prediction Section */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h2 className="text-2xl font-semibold mb-4 flex items-center">
-                    <Brain className="h-6 w-6 mr-2 text-primary" />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                  <h2 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
+                    <Brain className="h-5 w-5 md:h-6 md:w-6 mr-2 text-primary" />
                     AI-Powered Health Predictions
                   </h2>
                   <SymptomPredictor />
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h2 className="text-2xl font-semibold mb-4 flex items-center">
-                    <Activity className="h-6 w-6 mr-2 text-primary" />
+                <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                  <h2 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
+                    <Activity className="h-5 w-5 md:h-6 md:w-6 mr-2 text-primary" />
                     Symptom Analysis
                   </h2>
                   <SymptomAnalyzer />
@@ -205,34 +218,34 @@ const AIDashboard = () => {
               </div>
 
               {/* News and Updates */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h2 className="text-2xl font-semibold mb-4 flex items-center">
-                    <BookOpen className="h-6 w-6 mr-2 text-primary" />
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
+                <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                  <h2 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
+                    <BookOpen className="h-5 w-5 md:h-6 md:w-6 mr-2 text-primary" />
                     Latest Research
                   </h2>
                   <ul className="space-y-3">
                     <li className="hover:bg-gray-50 p-2 rounded-md transition-colors">
-                      <button className="text-accent hover:underline text-left w-full">
+                      <button className="text-accent hover:underline text-left w-full text-sm md:text-base">
                         New study on AI in early disease detection
                       </button>
                     </li>
                     <li className="hover:bg-gray-50 p-2 rounded-md transition-colors">
-                      <button className="text-accent hover:underline text-left w-full">
+                      <button className="text-accent hover:underline text-left w-full text-sm md:text-base">
                         ML models improve drug discovery process
                       </button>
                     </li>
                     <li className="hover:bg-gray-50 p-2 rounded-md transition-colors">
-                      <button className="text-accent hover:underline text-left w-full">
+                      <button className="text-accent hover:underline text-left w-full text-sm md:text-base">
                         AI-assisted treatment plans show promising results
                       </button>
                     </li>
                   </ul>
                 </div>
                 {areaName && (
-                  <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">
-                    <h2 className="text-2xl font-semibold mb-4 flex items-center">
-                      <Newspaper className="h-6 w-6 mr-2 text-primary" />
+                  <div className="lg:col-span-2 bg-white p-4 md:p-6 rounded-lg shadow-md">
+                    <h2 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
+                      <Newspaper className="h-5 w-5 md:h-6 md:w-6 mr-2 text-primary" />
                       Local Health Updates
                     </h2>
                     <LocationHealthNews cityName={areaName.split(',')[0]} />
@@ -243,8 +256,8 @@ const AIDashboard = () => {
           )}
 
           {activeTab === 'analysis' && (
-            <div className="grid grid-cols-1 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="grid grid-cols-1 gap-4 md:gap-6">
+              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
                 <PandemicDashboard data={pandemicData} />
               </div>
               <AIHealthDashboard healthCardData={yourHealthCardData} />
@@ -252,22 +265,21 @@ const AIDashboard = () => {
           )}
 
           {activeTab === 'hospitals' && (
-            <div className="grid grid-cols-1 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="grid grid-cols-1 gap-4 md:gap-6">
+              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
                 <HospitalStatistics hospitalData={hospitalData} />
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
                 <MedicalShopDashboard data={medicalShopsData} />
               </div>
-              
             </div>
           )}
 
           {activeTab === 'statistics' && (
-            <div className="grid grid-cols-1 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4 flex items-center">
-                  <Map className="h-6 w-6 mr-2 text-primary" />
+            <div className="grid grid-cols-1 gap-4 md:gap-6">
+              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                <h2 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
+                  <Map className="h-5 w-5 md:h-6 md:w-6 mr-2 text-primary" />
                   Disease Map of India
                 </h2>
                 <div className="mb-4 relative">
@@ -277,10 +289,10 @@ const AIDashboard = () => {
                   <div className="relative">
                     <button
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-left shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-left shadow-sm focus:outline-none focus:ring-2 focus:ring-primary text-sm md:text-base"
                     >
                       <span className="block truncate">{selectedDisease}</span>
-                      <ChevronDownIcon className="absolute right-3 top-3 h-5 w-5 text-gray-400" />
+                      <ChevronDownIcon className="absolute right-3 top-3 h-4 w-4 md:h-5 md:w-5 text-gray-400" />
                     </button>
                     {isDropdownOpen && (
                       <div className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 ring-1 ring-black ring-opacity-5 overflow-auto">
@@ -292,7 +304,7 @@ const AIDashboard = () => {
                               disease === selectedDisease
                                 ? 'bg-primary text-white'
                                 : 'text-gray-900 hover:bg-gray-50'
-                            } w-full px-4 py-2 text-left`}
+                            } w-full px-4 py-2 text-left text-sm md:text-base`}
                           >
                             {disease}
                           </button>
@@ -301,7 +313,7 @@ const AIDashboard = () => {
                     )}
                   </div>
                 </div>
-                <div className="w-full lg:w-3/4 mx-auto" style={{ height: '500px' }}>
+                <div className="w-full lg:w-3/4 mx-auto h-[300px] md:h-[500px]">
                   <IndiaDiseaseMap diseaseData={diseaseData} selectedDisease={selectedDisease} />
                 </div>
               </div>
@@ -310,18 +322,18 @@ const AIDashboard = () => {
         </div>
 
         {/* Footer Section */}
-        <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4 flex items-center">
-            <HelpCircle className="h-6 w-6 mr-2 text-primary" />
+        <div className="mt-6 md:mt-8 bg-white p-4 md:p-6 rounded-lg shadow-md">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
+            <HelpCircle className="h-5 w-5 md:h-6 md:w-6 mr-2 text-primary" />
             AI in Healthcare: What's Next?
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
             Artificial Intelligence is revolutionizing healthcare by improving diagnosis accuracy, 
             treatment effectiveness, and patient care. From predictive analytics to robotic surgery, 
             AI is paving the way for more personalized and efficient healthcare solutions.
           </p>
-          <button className="mt-4 bg-secondary hover:bg-secondary-dark text-white py-2 px-6 rounded-md transition-colors duration-200 flex items-center">
-            <BookOpen className="h-5 w-5 mr-2" />
+          <button className="mt-4 bg-secondary hover:bg-secondary-dark text-white py-2 px-4 md:px-6 rounded-md transition-colors duration-200 flex items-center text-sm md:text-base">
+            <BookOpen className="h-4 w-4 md:h-5 md:w-5 mr-2" />
             Learn More
           </button>
         </div>
