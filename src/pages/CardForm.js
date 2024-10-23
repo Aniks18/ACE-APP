@@ -4,6 +4,7 @@ import { useAuth } from '../autocontext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PencilIcon, XMarkIcon, CheckIcon, EyeIcon, PlusIcon, ClockIcon, BuildingOffice2Icon, UserIcon, CalendarIcon } from '@heroicons/react/24/outline';
 
+
 const GET_CITIZEN_ID = gql`
   query GetCitizenId($email: String!) {
     citizens(where: {email: {_eq: $email}}) {
@@ -59,8 +60,6 @@ const CardForm = () => {
   const [previewUrl, setPreviewUrl] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
-  const [error, setError] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { data: citizenData } = useQuery(GET_CITIZEN_ID, {
     variables: { email: user?.email },
@@ -72,55 +71,21 @@ const CardForm = () => {
     skip: !citizenData?.citizens[0]?.id,
   });
 
-  const [addHealthRecord] = useMutation(ADD_HEALTH_RECORD, {
-    onError: (error) => {
-      console.error('Add health record error:', error);
-      setError('Failed to add health record. Please try again.');
-      setIsSubmitting(false);
-    }
-  });
-
-  const [updateHealthRecord] = useMutation(UPDATE_HEALTH_RECORD, {
-    onError: (error) => {
-      console.error('Update health record error:', error);
-      setError('Failed to update health record. Please try again.');
-      setIsSubmitting(false);
-    }
-  });
+  const [addHealthRecord] = useMutation(ADD_HEALTH_RECORD);
+  const [updateHealthRecord] = useMutation(UPDATE_HEALTH_RECORD);
 
   const handleChange = (e) => {
-    setError('');
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     setFile(selectedFile);
-    setError('');
 
     if (selectedFile) {
-      if (selectedFile.size > 5 * 1024 * 1024) {
-        setError('File size must be less than 5MB');
-        setFile(null);
-        setPreviewUrl('');
-        return;
-      }
-
-      if (!selectedFile.type.startsWith('image/')) {
-        setError('Please upload an image file');
-        setFile(null);
-        setPreviewUrl('');
-        return;
-      }
-
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreviewUrl(reader.result);
-      };
-      reader.onerror = () => {
-        setError('Error reading file');
-        setFile(null);
-        setPreviewUrl('');
       };
       reader.readAsDataURL(selectedFile);
     } else {
@@ -130,37 +95,20 @@ const CardForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    setIsSubmitting(true);
-
     if (!citizenData?.citizens[0]?.id) {
-      setError('User information not found. Please try logging in again.');
-      setIsSubmitting(false);
-      return;
-    }
-
-    if (!formData.record_type || !formData.hospital_or_lab_name || !formData.visit_date) {
-      setError('Please fill in all required fields (Record Type, Hospital/Lab Name, and Visit Date)');
-      setIsSubmitting(false);
+      console.error('Citizen ID not found');
       return;
     }
 
     try {
-      const submitData = {
-        record_type: formData.record_type.trim(),
-        record_description: formData.record_description?.trim(),
-        hospital_or_lab_name: formData.hospital_or_lab_name.trim(),
-        doctor_name: formData.doctor_name?.trim(),
-        visit_date: formData.visit_date,
-        additional_notes: formData.additional_notes?.trim(),
-        file_path: previewUrl || formData.file_path,
-      };
-
       if (isEditing) {
         await updateHealthRecord({
           variables: {
             id: formData.id,
-            input: submitData,
+            input: {
+              ...formData,
+              file_path: previewUrl || formData.file_path,
+            },
           },
         });
       } else {
@@ -168,19 +116,16 @@ const CardForm = () => {
           variables: {
             input: {
               citizen_id: citizenData.citizens[0].id,
-              ...submitData,
+              ...formData,
+              file_path: previewUrl,
             },
           },
         });
       }
-
-      await refetchHealthRecords();
       resetForm();
-      setIsSubmitting(false);
+      refetchHealthRecords();
     } catch (error) {
       console.error('Error saving health record:', error);
-      setError('An error occurred while saving the record');
-      setIsSubmitting(false);
     }
   };
 
@@ -197,30 +142,28 @@ const CardForm = () => {
     setFile(null);
     setPreviewUrl('');
     setIsEditing(false);
-    setError('');
   };
 
   const handleEdit = (record) => {
-    setError('');
     setFormData({
       id: record.id,
-      record_type: record.record_type || '',
-      record_description: record.record_description || '',
-      hospital_or_lab_name: record.hospital_or_lab_name || '',
-      doctor_name: record.doctor_name || '',
-      visit_date: record.visit_date || '',
-      additional_notes: record.additional_notes || '',
+      record_type: record.record_type,
+      record_description: record.record_description,
+      hospital_or_lab_name: record.hospital_or_lab_name,
+      doctor_name: record.doctor_name,
+      visit_date: record.visit_date,
+      additional_notes: record.additional_notes,
     });
-    setPreviewUrl(record.file_path || '');
+    setPreviewUrl(record.file_path);
     setIsEditing(true);
   };
 
   const formFields = [
-    { name: 'record_type', label: 'Record Type*', type: 'text', required: true },
+    { name: 'record_type', label: 'Record Type', type: 'text' },
     { name: 'record_description', label: 'Record Description', type: 'textarea' },
-    { name: 'hospital_or_lab_name', label: 'Hospital/Lab Name*', type: 'text', required: true },
+    { name: 'hospital_or_lab_name', label: 'Hospital/Lab Name', type: 'text' },
     { name: 'doctor_name', label: 'Doctor Name', type: 'text' },
-    { name: 'visit_date', label: 'Visit Date*', type: 'date', required: true },
+    { name: 'visit_date', label: 'Visit Date', type: 'date' },
     { name: 'additional_notes', label: 'Additional Notes', type: 'textarea' },
   ];
 
@@ -272,11 +215,11 @@ const CardForm = () => {
                   </div>
                   <div className="mt-2 space-y-1">
                     <p className="text-sm text-gray-600 flex items-center">
-                      <BuildingOffice2Icon className="h-4 w-4 mr-2 text-blue-500" />
+                    <BuildingOffice2Icon className="h-4 w-4 mr-2 text-blue-500" />
                       <strong>Hospital/Lab:</strong> {record.hospital_or_lab_name}
                     </p>
                     <p className="text-sm text-gray-600 flex items-center">
-                      <UserIcon className="h-4 w-4 mr-2 text-blue-500" />
+                    <UserIcon className="h-4 w-4 mr-2 text-blue-500" />
                       <strong>Doctor:</strong> {record.doctor_name}
                     </p>
                     <p className="text-sm text-gray-600 flex items-center">
@@ -310,13 +253,6 @@ const CardForm = () => {
             {isEditing ? <PencilIcon className="h-8 w-8 mr-2 text-blue-500" /> : <PlusIcon className="h-8 w-8 mr-2 text-blue-500" />}
             {isEditing ? 'Edit Health Record' : 'Add Health Record'}
           </h2>
-
-          {error && (
-            <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-              {error}
-            </div>
-          )}
-
           <form onSubmit={handleSubmit} className="space-y-6">
             {formFields.map((field) => (
               <motion.div
@@ -324,16 +260,13 @@ const CardForm = () => {
                 whileHover={{ scale: 1.02 }}
                 className="flex flex-col"
               >
-                <label htmlFor={field.name} className="text-sm font-medium text-gray-700 mb-1">
-                  {field.label}
-                </label>
+                <label htmlFor={field.name} className="text-sm font-medium text-gray-700 mb-1">{field.label}</label>
                 {field.type === 'textarea' ? (
                   <textarea
                     id={field.name}
                     name={field.name}
                     value={formData[field.name]}
                     onChange={handleChange}
-                    required={field.required}
                     className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
                     rows="3"
                   />
@@ -344,7 +277,6 @@ const CardForm = () => {
                     name={field.name}
                     value={formData[field.name]}
                     onChange={handleChange}
-                    required={field.required}
                     className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
                   />
                 )}
@@ -375,34 +307,18 @@ const CardForm = () => {
             <div className="flex space-x-4">
               <motion.button
                 type="submit"
-                disabled={isSubmitting}
-                whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
-                whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-                className={`flex-1 ${
-                  isSubmitting ? 'bg-blue-400' : 'bg-blue-600'
-                } text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center text-lg font-semibold`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center text-lg font-semibold"
               >
-                {isSubmitting ? (
-                  <span className="flex items-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    Processing...
-                  </span>
-                ) : (
-                  <>
-                    <CheckIcon className="h-6 w-6 mr-2" />
-                    {isEditing ? 'Save Changes' : 'Submit Record'}
-                  </>
-                )}
+                <CheckIcon className="h-6 w-6 mr-2" />
+                {isEditing ? 'Save Changes' : 'Submit Record'}
               </motion.button>
               {isEditing && (
                 <motion.button
                   type="button"
-                  disabled={isSubmitting}
-                  whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
-                  whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={resetForm}
                   className="bg-gray-300 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-400 transition duration-300 flex items-center justify-center text-lg font-semibold"
                 >

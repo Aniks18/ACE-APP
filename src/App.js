@@ -21,6 +21,7 @@ import HealthRecordCard from './pages/HealthReportCard';
 import ChatbotToggle from './components/ChatbotToggle';
 import AddHospital from './pages/addHospital'; // Add this import
 import emailjs from '@emailjs/browser';
+
 emailjs.init("w-BPtYL_WIabHlHsv");
 
 function App() {
