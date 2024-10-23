@@ -134,7 +134,7 @@ const AIDashboard = () => {
                   {areaName?.split(',')[0]}
                 </span>
               )}
-              <button 
+              <button
                 onClick={handleRefresh}
                 className="bg-primary hover:bg-primary-dark text-white px-2 md:px-3 py-1 rounded-md flex items-center text-xs md:text-sm"
               >
@@ -166,6 +166,14 @@ const AIDashboard = () => {
                 )}
               </div>
             </div>
+            <button
+              onClick={handleRefresh}
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-flex items-center transition duration-300 ease-in-out"
+              disabled={isRefreshing}
+            >
+              <ArrowPathIcon className={`h-5 w-5 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+              <span>{isRefreshing ? 'Refreshing...' : 'Refresh Location'}</span>
+            </button>
           </div>
         </div>
       )}
@@ -211,7 +219,7 @@ const AIDashboard = () => {
                 <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
                   <h2 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
                     <Activity className="h-5 w-5 md:h-6 md:w-6 mr-2 text-primary" />
-                    Symptom Analyzer With Medicine Reccomendation Bot
+                    Symptom Analysis
                   </h2>
                   <SymptomAnalyzer />
                 </div>
@@ -328,8 +336,8 @@ const AIDashboard = () => {
             AI in Healthcare: What's Next?
           </h2>
           <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-            Artificial Intelligence is revolutionizing healthcare by improving diagnosis accuracy, 
-            treatment effectiveness, and patient care. From predictive analytics to robotic surgery, 
+            Artificial Intelligence is revolutionizing healthcare by improving diagnosis accuracy,
+            treatment effectiveness, and patient care. From predictive analytics to robotic surgery,
             AI is paving the way for more personalized and efficient healthcare solutions.
           </p>
           <button className="mt-4 bg-secondary hover:bg-secondary-dark text-white py-2 px-4 md:px-6 rounded-md transition-colors duration-200 flex items-center text-sm md:text-base">
