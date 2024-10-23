@@ -1,0 +1,262 @@
+{
+    "city_health_data": {
+      "city": "Prayagraj",
+      "state": "Uttar Pradesh",
+      "year": 2024,
+      "total_population": 1500000,
+      "disease_statistics": {
+        "heart_disease": {
+          "total_cases": 28500,
+          "cases_by_age_gender": [
+            {
+              "age_group": "30-40",
+              "male_cases": 2100,
+              "female_cases": 1800,
+              "common_types": ["Hypertension", "Coronary Artery Disease"]
+            },
+            {
+              "age_group": "41-50",
+              "male_cases": 3500,
+              "female_cases": 2800,
+              "common_types": ["Hypertension", "Heart Attack", "Angina"]
+            },
+            {
+              "age_group": "51-60",
+              "male_cases": 4800,
+              "female_cases": 4200,
+              "common_types": ["Coronary Artery Disease", "Heart Failure"]
+            },
+            {
+              "age_group": "61-70",
+              "male_cases": 5100,
+              "female_cases": 4200,
+              "common_types": ["Heart Failure", "Arrhythmia"]
+            }
+          ],
+          "yearly_growth_rate": "4.2%"
+        },
+        "diabetes": {
+          "total_cases": 45000,
+          "cases_by_age_gender": [
+            {
+              "age_group": "20-30",
+              "male_cases": 2200,
+              "female_cases": 1800,
+              "type": "Type 1"
+            },
+            {
+              "age_group": "31-40",
+              "male_cases": 4500,
+              "female_cases": 4200,
+              "type": "Type 2"
+            },
+            {
+              "age_group": "41-50",
+              "male_cases": 7800,
+              "female_cases": 7200,
+              "type": "Type 2"
+            },
+            {
+              "age_group": "51-60",
+              "male_cases": 8900,
+              "female_cases": 8400,
+              "type": "Type 2"
+            }
+          ],
+          "yearly_growth_rate": "5.8%"
+        },
+        "respiratory_diseases": {
+          "total_cases": 32000,
+          "cases_by_age_gender": [
+            {
+              "age_group": "0-15",
+              "male_cases": 2800,
+              "female_cases": 2400,
+              "common_types": ["Asthma", "Bronchitis"]
+            },
+            {
+              "age_group": "16-30",
+              "male_cases": 3600,
+              "female_cases": 3200,
+              "common_types": ["Asthma", "COPD"]
+            },
+            {
+              "age_group": "31-50",
+              "male_cases": 5800,
+              "female_cases": 5200,
+              "common_types": ["COPD", "Chronic Bronchitis"]
+            },
+            {
+              "age_group": "51+",
+              "male_cases": 4800,
+              "female_cases": 4200,
+              "common_types": ["COPD", "Emphysema"]
+            }
+          ],
+          "yearly_growth_rate": "3.5%"
+        },
+        "cancer": {
+          "total_cases": 12500,
+          "cases_by_age_gender": [
+            {
+              "age_group": "30-45",
+              "male_cases": 1200,
+              "female_cases": 1800,
+              "common_types": ["Breast", "Oral", "Lung"]
+            },
+            {
+              "age_group": "46-60",
+              "male_cases": 2400,
+              "female_cases": 2800,
+              "common_types": ["Lung", "Breast", "Colorectal"]
+            },
+            {
+              "age_group": "61+",
+              "male_cases": 2100,
+              "female_cases": 2200,
+              "common_types": ["Prostate", "Breast", "Lung"]
+            }
+          ],
+          "yearly_growth_rate": "2.8%"
+        },
+        "kidney_disease": {
+          "total_cases": 18500,
+          "cases_by_age_gender": [
+            {
+              "age_group": "20-40",
+              "male_cases": 2200,
+              "female_cases": 1800,
+              "severity": ["Mild", "Moderate"]
+            },
+            {
+              "age_group": "41-60",
+              "male_cases": 4100,
+              "female_cases": 3800,
+              "severity": ["Moderate", "Severe"]
+            },
+            {
+              "age_group": "61+",
+              "male_cases": 3400,
+              "female_cases": 3200,
+              "severity": ["Severe", "End-Stage"]
+            }
+          ],
+          "yearly_growth_rate": "4.5%"
+        },
+        "tuberculosis": {
+          "total_cases": 8500,
+          "cases_by_age_gender": [
+            {
+              "age_group": "15-30",
+              "male_cases": 1200,
+              "female_cases": 900,
+              "type": ["Pulmonary", "Extra-pulmonary"]
+            },
+            {
+              "age_group": "31-50",
+              "male_cases": 2400,
+              "female_cases": 1800,
+              "type": ["Pulmonary", "MDR-TB"]
+            },
+            {
+              "age_group": "51+",
+              "male_cases": 1200,
+              "female_cases": 1000,
+              "type": ["Pulmonary", "MDR-TB"]
+            }
+          ],
+          "yearly_growth_rate": "-2.5%"
+        },
+        "liver_disease": {
+          "total_cases": 15500,
+          "cases_by_age_gender": [
+            {
+              "age_group": "20-40",
+              "male_cases": 2800,
+              "female_cases": 1200,
+              "common_types": ["Fatty Liver", "Hepatitis"]
+            },
+            {
+              "age_group": "41-60",
+              "male_cases": 4200,
+              "female_cases": 2800,
+              "common_types": ["Cirrhosis", "Hepatitis"]
+            },
+            {
+              "age_group": "61+",
+              "male_cases": 2800,
+              "female_cases": 1700,
+              "common_types": ["Cirrhosis", "Liver Cancer"]
+            }
+          ],
+          "yearly_growth_rate": "3.8%"
+        },
+        "dengue": {
+          "total_cases": 4500,
+          "cases_by_age_gender": [
+            {
+              "age_group": "0-15",
+              "male_cases": 600,
+              "female_cases": 500,
+              "severity": ["Mild", "Moderate"]
+            },
+            {
+              "age_group": "16-40",
+              "male_cases": 1200,
+              "female_cases": 1100,
+              "severity": ["Moderate", "Severe"]
+            },
+            {
+              "age_group": "41+",
+              "male_cases": 600,
+              "female_cases": 500,
+              "severity": ["Moderate", "Severe"]
+            }
+          ],
+          "yearly_growth_rate": "seasonal_variation"
+        },
+        "diarrheal_diseases": {
+          "total_cases": 25000,
+          "cases_by_age_gender": [
+            {
+              "age_group": "0-5",
+              "male_cases": 3200,
+              "female_cases": 2800,
+              "severity": ["Mild", "Moderate"]
+            },
+            {
+              "age_group": "6-15",
+              "male_cases": 2800,
+              "female_cases": 2400,
+              "severity": ["Mild", "Moderate"]
+            },
+            {
+              "age_group": "16-50",
+              "male_cases": 7200,
+              "female_cases": 6600,
+              "severity": ["Mild", "Moderate"]
+            }
+          ],
+          "yearly_growth_rate": "seasonal_variation"
+        }
+      },
+      "risk_factors": {
+        "environmental": ["Air Pollution", "Water Quality", "Sanitation"],
+        "lifestyle": ["Smoking", "Alcohol", "Physical Inactivity", "Poor Diet"],
+        "socioeconomic": ["Income Level", "Education", "Healthcare Access"]
+      },
+      "healthcare_infrastructure": {
+        "hospitals": 45,
+        "primary_health_centers": 120,
+        "specialized_clinics": 280,
+        "diagnostic_centers": 150
+      },
+      "metadata": {
+        "last_updated": "2024-03-15",
+        "data_source": "District Health Department",
+        "reporting_period": "Annual",
+        "data_reliability": "Estimated",
+        "notes": "Data is approximated based on hospital records and health surveys"
+      }
+    }
+  }

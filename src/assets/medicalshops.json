@@ -1,0 +1,395 @@
+{
+    "medical_shops": [
+      {
+        "id": 1,
+        "name": "New Life Medical Store",
+        "license_number": "UP-PRA-2024-001",
+        "address": "45/2 Civil Lines, Near SRN Hospital, Prayagraj, UP 211001",
+        "contact": {
+          "phone": "+91-532-2456789",
+          "email": "newlife.medical@gmail.com",
+          "emergency_number": "+91-9876543210"
+        },
+        "operating_hours": "24x7",
+        "specialization": "General Medicine and Emergency Supplies",
+        "owner": "Rajesh Kumar Gupta",
+        "staff_count": 8,
+        "has_cold_storage": true,
+        "home_delivery": true,
+        "inventory": [
+          {
+            "id": "NL001",
+            "medicine_name": "Paracetamol 500mg",
+            "category": "Fever & Pain Relief",
+            "manufacturer": "Cipla",
+            "current_stock": 5000,
+            "unit_price": 2.50,
+            "total_sold_last_month": 2800,
+            "reorder_level": 1000,
+            "prescription_required": false
+          },
+          {
+            "id": "NL002",
+            "medicine_name": "Amoxicillin 500mg",
+            "category": "Antibiotics",
+            "manufacturer": "Sun Pharma",
+            "current_stock": 2000,
+            "unit_price": 12.75,
+            "total_sold_last_month": 850,
+            "reorder_level": 500,
+            "prescription_required": true
+          },
+          {
+            "id": "NL003",
+            "medicine_name": "Insulin Glargine",
+            "category": "Diabetes",
+            "manufacturer": "Sanofi",
+            "current_stock": 200,
+            "unit_price": 650.00,
+            "total_sold_last_month": 75,
+            "reorder_level": 50,
+            "prescription_required": true,
+            "storage": "refrigerated"
+          }
+        ],
+        "sales_summary": {
+          "monthly_revenue": 450000,
+          "average_daily_customers": 120,
+          "popular_categories": ["Diabetes", "Cardiac", "Antibiotics"]
+        }
+      },
+      {
+        "id": 2,
+        "name": "Medicare Plus Pharmacy",
+        "license_number": "UP-PRA-2024-002",
+        "address": "78 Katra Market, Near Mayo Hospital, Prayagraj, UP 211002",
+        "contact": {
+          "phone": "+91-532-2567890",
+          "email": "medicare.plus@gmail.com",
+          "emergency_number": "+91-9876543211"
+        },
+        "operating_hours": "8:00 AM - 11:00 PM",
+        "specialization": "Cardiac and Diabetes Medicines",
+        "owner": "Dr. Priya Sharma",
+        "staff_count": 6,
+        "has_cold_storage": true,
+        "home_delivery": true,
+        "inventory": [
+          {
+            "id": "MP001",
+            "medicine_name": "Metformin 500mg",
+            "category": "Diabetes",
+            "manufacturer": "USV Private Limited",
+            "current_stock": 3000,
+            "unit_price": 3.50,
+            "total_sold_last_month": 1200,
+            "reorder_level": 800,
+            "prescription_required": true
+          },
+          {
+            "id": "MP002",
+            "medicine_name": "Amlodipine 5mg",
+            "category": "Cardiac",
+            "manufacturer": "Zydus",
+            "current_stock": 1500,
+            "unit_price": 45.00,
+            "total_sold_last_month": 600,
+            "reorder_level": 300,
+            "prescription_required": true
+          },
+          {
+            "id": "MP003",
+            "medicine_name": "Blood Glucose Test Strips",
+            "category": "Medical Supplies",
+            "manufacturer": "Accu-Check",
+            "current_stock": 1000,
+            "unit_price": 1200.00,
+            "total_sold_last_month": 350,
+            "reorder_level": 200,
+            "prescription_required": false
+          }
+        ],
+        "sales_summary": {
+          "monthly_revenue": 380000,
+          "average_daily_customers": 90,
+          "popular_categories": ["Diabetes Supplies", "Cardiac", "General Medicine"]
+        }
+      },
+      {
+        "id": 3,
+        "name": "Wellness Forever Pharmacy",
+        "license_number": "UP-PRA-2024-003",
+        "address": "23/4 George Town, Prayagraj, UP 211003",
+        "contact": {
+          "phone": "+91-532-2678901",
+          "email": "wellness.forever@gmail.com",
+          "emergency_number": "+91-9876543212"
+        },
+        "operating_hours": "24x7",
+        "specialization": "Ayurvedic and Allopathic Medicines",
+        "owner": "Anil Kumar Srivastava",
+        "staff_count": 10,
+        "has_cold_storage": true,
+        "home_delivery": true,
+        "inventory": [
+          {
+            "id": "WF001",
+            "medicine_name": "Ashwagandha Tablets",
+            "category": "Ayurvedic",
+            "manufacturer": "Dabur",
+            "current_stock": 4000,
+            "unit_price": 220.00,
+            "total_sold_last_month": 1500,
+            "reorder_level": 1000,
+            "prescription_required": false
+          },
+          {
+            "id": "WF002",
+            "medicine_name": "Thyronorm 50mcg",
+            "category": "Thyroid",
+            "manufacturer": "Abbott",
+            "current_stock": 2000,
+            "unit_price": 125.00,
+            "total_sold_last_month": 800,
+            "reorder_level": 400,
+            "prescription_required": true
+          },
+          {
+            "id": "WF003",
+            "medicine_name": "Chyawanprash",
+            "category": "Ayurvedic",
+            "manufacturer": "Patanjali",
+            "current_stock": 300,
+            "unit_price": 340.00,
+            "total_sold_last_month": 150,
+            "reorder_level": 100,
+            "prescription_required": false
+          }
+        ],
+        "sales_summary": {
+          "monthly_revenue": 520000,
+          "average_daily_customers": 150,
+          "popular_categories": ["Ayurvedic", "General Medicine", "Health Supplements"]
+        }
+      },
+      {
+        "id": 4,
+        "name": "City Medicals",
+        "license_number": "UP-PRA-2024-004",
+        "address": "56 Transport Nagar, Prayagraj, UP 211004",
+        "contact": {
+          "phone": "+91-532-2789012",
+          "email": "city.medicals@gmail.com",
+          "emergency_number": "+91-9876543213"
+        },
+        "operating_hours": "8:00 AM - 10:00 PM",
+        "specialization": "Generic Medicines and Surgical Supplies",
+        "owner": "Mohammad Irfan",
+        "staff_count": 5,
+        "has_cold_storage": false,
+        "home_delivery": true,
+        "inventory": [
+          {
+            "id": "CM001",
+            "medicine_name": "Generic Paracetamol 500mg",
+            "category": "Fever & Pain Relief",
+            "manufacturer": "Generic India",
+            "current_stock": 8000,
+            "unit_price": 1.50,
+            "total_sold_last_month": 3500,
+            "reorder_level": 2000,
+            "prescription_required": false
+          },
+          {
+            "id": "CM002",
+            "medicine_name": "Surgical Masks",
+            "category": "Medical Supplies",
+            "manufacturer": "3M",
+            "current_stock": 10000,
+            "unit_price": 10.00,
+            "total_sold_last_month": 5000,
+            "reorder_level": 3000,
+            "prescription_required": false
+          },
+          {
+            "id": "CM003",
+            "medicine_name": "Generic Metformin 500mg",
+            "category": "Diabetes",
+            "manufacturer": "Generic India",
+            "current_stock": 4000,
+            "unit_price": 2.00,
+            "total_sold_last_month": 1800,
+            "reorder_level": 1000,
+            "prescription_required": true
+          }
+        ],
+        "sales_summary": {
+          "monthly_revenue": 280000,
+          "average_daily_customers": 85,
+          "popular_categories": ["Generic Medicines", "Medical Supplies", "First Aid"]
+        }
+      },
+      {
+        "id": 5,
+        "name": "Health First Pharmacy",
+        "license_number": "UP-PRA-2024-005",
+        "address": "12 Civil Lines, Near High Court, Prayagraj, UP 211005",
+        "contact": {
+          "phone": "+91-532-2890123",
+          "email": "health.first@gmail.com",
+          "emergency_number": "+91-9876543214"
+        },
+        "operating_hours": "24x7",
+        "specialization": "Premium Medicines and International Brands",
+        "owner": "Dr. Suresh Agarwal",
+        "staff_count": 12,
+        "has_cold_storage": true,
+        "home_delivery": true,
+        "inventory": [
+          {
+            "id": "HF001",
+            "medicine_name": "Vitamin D3 Supplements",
+            "category": "Supplements",
+            "manufacturer": "GNC",
+            "current_stock": 1000,
+            "unit_price": 895.00,
+            "total_sold_last_month": 400,
+            "reorder_level": 200,
+            "prescription_required": false
+          },
+          {
+            "id": "HF002",
+            "medicine_name": "Omega-3 Fish Oil",
+            "category": "Supplements",
+            "manufacturer": "NOW Foods",
+            "current_stock": 800,
+            "unit_price": 1200.00,
+            "total_sold_last_month": 300,
+            "reorder_level": 150,
+            "prescription_required": false
+          },
+          {
+            "id": "HF003",
+            "medicine_name": "Insulin Pen",
+            "category": "Diabetes",
+            "manufacturer": "Novo Nordisk",
+            "current_stock": 150,
+            "unit_price": 750.00,
+            "total_sold_last_month": 80,
+            "reorder_level": 40,
+            "prescription_required": true,
+            "storage": "refrigerated"
+          }
+        ],
+        "sales_summary": {
+          "monthly_revenue": 680000,
+          "average_daily_customers": 100,
+          "popular_categories": ["Premium Supplements", "International Brands", "Specialty Medicines"]
+        }
+      },
+      {
+        "id": 6,
+        "name": "People's Pharmacy",
+        "license_number": "UP-PRA-2024-006",
+        "address": "34/2 Lukerganj, Prayagraj, UP 211006",
+        "contact": {
+          "phone": "+91-532-2901234",
+          "email": "peoples.pharmacy@gmail.com",
+          "emergency_number": "+91-9876543215"
+        },
+        "operating_hours": "7:00 AM - 11:00 PM",
+        "specialization": "Affordable Medicines and Generic Alternatives",
+        "owner": "Vivek Yadav",
+        "staff_count": 7,
+        "has_cold_storage": false,
+        "home_delivery": true,
+        "inventory": [
+          {
+            "id": "PP001",
+            "medicine_name": "Generic Omeprazole",
+            "category": "Gastric",
+            "manufacturer": "Generic India",
+            "current_stock": 5000,
+            "unit_price": 3.00,
+            "total_sold_last_month": 2200,
+            "reorder_level": 1000,
+            "prescription_required": false
+          },
+          {
+            "id": "PP002",
+            "medicine_name": "Generic Cetirizine",
+            "category": "Antiallergic",
+            "manufacturer": "Generic India",
+            "current_stock": 6000,
+            "unit_price": 2.00,
+            "total_sold_last_month": 2800,
+            "reorder_level": 1500,
+            "prescription_required": false
+          },
+          {
+            "id": "PP003",
+            "medicine_name": "First Aid Kit",
+            "category": "Medical Supplies",
+            "manufacturer": "SafeCare",
+            "current_stock": 200,
+            "unit_price": 450.00,
+            "total_sold_last_month": 75,
+            "reorder_level": 50,
+            "prescription_required": false
+          }
+        ],
+        "sales_summary": {
+          "monthly_revenue": 320000,
+          "average_daily_customers": 130,
+          "popular_categories": ["Generic Medicines", "First Aid", "OTC Medicines"]
+        }
+      },
+      {
+        "id": 7,
+        "name": "Care Plus Medical Store",
+        "license_number": "UP-PRA-2024-007",
+        "address": "89 Daraganj, Near Ganga Bank, Prayagraj, UP 211007",
+        "contact": {
+          "phone": "+91-532-2345678",
+          "email": "careplus.medical@gmail.com",
+          "emergency_number": "+91-9876543216"
+        },
+        "operating_hours": "8:00 AM - 10:00 PM",
+        "specialization": "Mother and Baby Care Products",
+        "owner": "Sheetal Pandey",
+        "staff_count": 6,
+        "has_cold_storage": true,
+        "home_delivery": true,
+        "inventory": [
+          {
+            "id": "CP001",
+            "medicine_name": "Baby Formula",
+            "category": "Baby Care",
+            "manufacturer": "Nestle",
+            "current_stock": 500,
+            "unit_price": 545.00,
+            "total_sold_last_month": 200,
+            "reorder_level": 100,
+            "prescription_required": false
+          },
+          {
+            "id": "CP002",
+            "medicine_name": "Prenatal Vitamins",
+            "category": "Mother Care",
+            "manufacturer": "HealthVit",
+            "current_stock": 1000,
+            "unit_price": 780.00,
+            "total_sold_last_month": 400,
+            "reorder_level": 200,
+            "prescription_required": true
+          }
+        ],
+          "sales_summary": {
+            "monthly_revenue": 320000,
+            "average_daily_customers": 130,
+            "popular_categories": ["Generic Medicines", "First Aid", "OTC Medicines"]
+          }
+        }
+        ]
+    }
+      

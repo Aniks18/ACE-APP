@@ -1,0 +1,388 @@
+{
+    "hospitals": [
+      {
+        "id": 1,
+        "name": "Swaroop Rani Nehru Hospital",
+        "address": "12 Lowther Road, Civil Lines, Prayagraj, Uttar Pradesh 211001",
+        "phone": "+91-532-2421201",
+        "specialities": ["Multi-Specialty", "Emergency Care", "Surgery"],
+        "totalBeds": 850,
+        "doctors": [
+          {
+            "id": "SRN-001",
+            "name": "Dr. Rajesh Kumar",
+            "speciality": "Cardiology",
+            "qualification": "MD, DM Cardiology",
+            "contact": "+91-9876543210"
+          },
+          {
+            "id": "SRN-002",
+            "name": "Dr. Priya Sharma",
+            "speciality": "Neurology",
+            "qualification": "MD, DM Neurology",
+            "contact": "+91-9876543211"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Kamla Nehru Memorial Hospital",
+        "address": "165 MG Road, Georgetown, Prayagraj, Uttar Pradesh 211002",
+        "phone": "+91-532-2467890",
+        "specialities": ["Gynecology", "Pediatrics", "General Medicine"],
+        "totalBeds": 400,
+        "doctors": [
+          {
+            "id": "KNM-001",
+            "name": "Dr. Meena Gupta",
+            "speciality": "Gynecology",
+            "qualification": "MS, DNB",
+            "contact": "+91-9876543212"
+          },
+          {
+            "id": "KNM-002",
+            "name": "Dr. Amit Singh",
+            "speciality": "Pediatrics",
+            "qualification": "MD Pediatrics",
+            "contact": "+91-9876543213"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "United Medicity Hospital",
+        "address": "45 Leader Road, Civil Lines, Prayagraj, Uttar Pradesh 211003",
+        "phone": "+91-532-2445678",
+        "specialities": ["Orthopedics", "Cardiology", "Neurosurgery"],
+        "totalBeds": 300,
+        "doctors": [
+          {
+            "id": "UMH-001",
+            "name": "Dr. Sanjay Mishra",
+            "speciality": "Orthopedics",
+            "qualification": "MS Ortho",
+            "contact": "+91-9876543214"
+          },
+          {
+            "id": "UMH-002",
+            "name": "Dr. Anita Patel",
+            "speciality": "Cardiology",
+            "qualification": "MD, DM Cardiology",
+            "contact": "+91-9876543215"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Mayo Hospital",
+        "address": "78 Stanley Road, Katra, Prayagraj, Uttar Pradesh 211004",
+        "phone": "+91-532-2498765",
+        "specialities": ["General Surgery", "Internal Medicine", "ENT"],
+        "totalBeds": 250,
+        "doctors": [
+          {
+            "id": "MH-001",
+            "name": "Dr. Rahul Srivastava",
+            "speciality": "General Surgery",
+            "qualification": "MS",
+            "contact": "+91-9876543216"
+          },
+          {
+            "id": "MH-002",
+            "name": "Dr. Neha Joshi",
+            "speciality": "ENT",
+            "qualification": "MS ENT",
+            "contact": "+91-9876543217"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Nazreth Hospital",
+        "address": "23 Church Lane, Civil Lines, Prayagraj, Uttar Pradesh 211005",
+        "phone": "+91-532-2432109",
+        "specialities": ["Ophthalmology", "Dermatology", "General Medicine"],
+        "totalBeds": 200,
+        "doctors": [
+          {
+            "id": "NH-001",
+            "name": "Dr. Sarah Thomas",
+            "speciality": "Ophthalmology",
+            "qualification": "MS Ophthalmology",
+            "contact": "+91-9876543218"
+          },
+          {
+            "id": "NH-002",
+            "name": "Dr. Vikram Mathur",
+            "speciality": "Dermatology",
+            "qualification": "MD Dermatology",
+            "contact": "+91-9876543219"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Tej Bahadur Sapru Hospital",
+        "address": "89 Sapru Marg, Prayagraj, Uttar Pradesh 211006",
+        "phone": "+91-532-2478901",
+        "specialities": ["Trauma Care", "Orthopedics", "Emergency Medicine"],
+        "totalBeds": 350,
+        "doctors": [
+          {
+            "id": "TBS-001",
+            "name": "Dr. Arun Tiwari",
+            "speciality": "Trauma Surgery",
+            "qualification": "MS, MCh",
+            "contact": "+91-9876543220"
+          },
+          {
+            "id": "TBS-002",
+            "name": "Dr. Pooja Verma",
+            "speciality": "Emergency Medicine",
+            "qualification": "MD",
+            "contact": "+91-9876543221"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Galaxy Hospital",
+        "address": "34 Transport Nagar, Prayagraj, Uttar Pradesh 211007",
+        "phone": "+91-532-2456789",
+        "specialities": ["Gastroenterology", "Urology", "General Surgery"],
+        "totalBeds": 180,
+        "doctors": [
+          {
+            "id": "GH-001",
+            "name": "Dr. Mohit Agarwal",
+            "speciality": "Gastroenterology",
+            "qualification": "MD, DM Gastro",
+            "contact": "+91-9876543222"
+          },
+          {
+            "id": "GH-002",
+            "name": "Dr. Ritu Singh",
+            "speciality": "Urology",
+            "qualification": "MS, MCh Urology",
+            "contact": "+91-9876543223"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Rani Laxmi Bai Memorial Hospital",
+        "address": "56 Maharana Pratap Marg, Prayagraj, Uttar Pradesh 211008",
+        "phone": "+91-532-2467890",
+        "specialities": ["Obstetrics", "Gynecology", "Neonatology"],
+        "totalBeds": 275,
+        "doctors": [
+          {
+            "id": "RLB-001",
+            "name": "Dr. Sunita Yadav",
+            "speciality": "Obstetrics",
+            "qualification": "MD, DNB",
+            "contact": "+91-9876543224"
+          },
+          {
+            "id": "RLB-002",
+            "name": "Dr. Rajiv Kumar",
+            "speciality": "Neonatology",
+            "qualification": "MD Pediatrics, DM Neonatology",
+            "contact": "+91-9876543225"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "City Hospital",
+        "address": "12 Civil Lines, Prayagraj, Uttar Pradesh 211009",
+        "phone": "+91-532-2445678",
+        "specialities": ["Cardiology", "Neurology", "Pulmonology"],
+        "totalBeds": 225,
+        "doctors": [
+          {
+            "id": "CH-001",
+            "name": "Dr. Ashok Gupta",
+            "speciality": "Pulmonology",
+            "qualification": "MD Chest Medicine",
+            "contact": "+91-9876543226"
+          },
+          {
+            "id": "CH-002",
+            "name": "Dr. Shweta Sharma",
+            "speciality": "Neurology",
+            "qualification": "MD, DM Neurology",
+            "contact": "+91-9876543227"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Vinayak Hospital",
+        "address": "78 Kasturba Gandhi Marg, Prayagraj, Uttar Pradesh 211010",
+        "phone": "+91-532-2434567",
+        "specialities": ["Orthopedics", "Physiotherapy", "Sports Medicine"],
+        "totalBeds": 150,
+        "doctors": [
+          {
+            "id": "VH-001",
+            "name": "Dr. Suresh Pandey",
+            "speciality": "Sports Medicine",
+            "qualification": "MS Ortho, Fellowship in Sports Medicine",
+            "contact": "+91-9876543228"
+          },
+          {
+            "id": "VH-002",
+            "name": "Dr. Anjali Saxena",
+            "speciality": "Physiotherapy",
+            "qualification": "MPT",
+            "contact": "+91-9876543229"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Apex Care Hospital",
+        "address": "45 Thornhill Road, Civil Lines, Prayagraj, Uttar Pradesh 211011",
+        "phone": "+91-532-2423456",
+        "specialities": ["Nephrology", "Urology", "Dialysis"],
+        "totalBeds": 200,
+        "doctors": [
+          {
+            "id": "ACH-001",
+            "name": "Dr. Vivek Mehta",
+            "speciality": "Nephrology",
+            "qualification": "MD, DM Nephrology",
+            "contact": "+91-9876543230"
+          },
+          {
+            "id": "ACH-002",
+            "name": "Dr. Preeti Gupta",
+            "speciality": "Urology",
+            "qualification": "MS, MCh Urology",
+            "contact": "+91-9876543231"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Popular Hospital",
+        "address": "90 George Town, Prayagraj, Uttar Pradesh 211012",
+        "phone": "+91-532-2412345",
+        "specialities": ["General Medicine", "Diabetology", "Endocrinology"],
+        "totalBeds": 175,
+        "doctors": [
+          {
+            "id": "PH-001",
+            "name": "Dr. Manoj Verma",
+            "speciality": "Diabetology",
+            "qualification": "MD, Fellowship in Diabetology",
+            "contact": "+91-9876543232"
+          },
+          {
+            "id": "PH-002",
+            "name": "Dr. Sarita Jain",
+            "speciality": "Endocrinology",
+            "qualification": "MD, DM Endocrinology",
+            "contact": "+91-9876543233"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Krishna Hospital",
+        "address": "23 Mumfordganj, Prayagraj, Uttar Pradesh 211013",
+        "phone": "+91-532-2401234",
+        "specialities": ["Pediatrics", "Child Surgery", "Neonatology"],
+        "totalBeds": 225,
+        "doctors": [
+          {
+            "id": "KH-001",
+            "name": "Dr. Rakesh Sinha",
+            "speciality": "Pediatric Surgery",
+            "qualification": "MS, MCh Pediatric Surgery",
+            "contact": "+91-9876543234"
+          },
+          {
+            "id": "KH-002",
+            "name": "Dr. Nisha Kapoor",
+            "speciality": "Neonatology",
+            "qualification": "MD Pediatrics, Fellowship in Neonatology",
+            "contact": "+91-9876543235"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Sun Hospital",
+        "address": "67 Station Road, Prayagraj, Uttar Pradesh 211014",
+        "phone": "+91-532-2490123",
+        "specialities": ["ENT", "Head & Neck Surgery", "Audiology"],
+        "totalBeds": 150,
+        "doctors": [
+          {
+            "id": "SH-001",
+            "name": "Dr. Deepak Malhotra",
+            "speciality": "ENT",
+            "qualification": "MS ENT",
+            "contact": "+91-9876543236"
+          },
+          {
+            "id": "SH-002",
+            "name": "Dr. Kavita Rawat",
+            "speciality": "Audiology",
+            "qualification": "MASLP",
+            "contact": "+91-9876543237"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Care & Cure Hospital",
+        "address": "34 Katra, Prayagraj, Uttar Pradesh 211015",
+        "phone": "+91-532-2489012",
+        "specialities": ["Psychiatry", "Psychology", "Mental Health"],
+        "totalBeds": 100,
+        "doctors": [
+          {
+            "id": "CCH-001",
+            "name": "Dr. Alok Bansal",
+            "speciality": "Psychiatry",
+            "qualification": "MD Psychiatry",
+            "contact": "+91-9876543238"
+          },
+          {
+            "id": "CCH-002",
+            "name": "Dr. Mira Rajput",
+            "speciality": "Clinical Psychology",
+            "qualification": "PhD Psychology",
+            "contact": "+91-9876543239"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Max Care Hospital",
+        "address": "89 Leader Road, Civil Lines, Prayagraj, Uttar Pradesh 211016",
+        "phone": "+91-532-2478901",
+        "specialities": ["Oncology", "Radiation Therapy", "Surgical Oncology"],
+        "totalBeds": 300,
+        "doctors": [
+          {
+            "id": "MCH-001",
+            "name": "Dr. Rajeev Kapoor",
+            "speciality": "Medical Oncology",
+            "qualification": "MD, DM Oncology",
+            "contact": "+91-9876543240"
+          },
+          {
+            "id": "MCH-002",
+            "name": "Dr. Shalini Verma",
+            "speciality": "Radiation Oncology",
+            "qualification": "MD Radiation Oncology",
+            "contact": "+91-9876543241"
+          }
+        ]
+      }
+    ]
+}

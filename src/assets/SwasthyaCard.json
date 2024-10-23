@@ -1,0 +1,1226 @@
+{
+    "citizens": [
+      {
+        "id": "PRG001",
+        "name": "Aditya Sharma",
+        "age": 45,
+        "gender": "male",
+        "bloodGroup": "B+",
+        "contact": "+91-9876543210",
+        "address": "123 Civil Lines, Prayagraj",
+        "occupation": "Teacher",
+        "emergencyContact": "+91-9876543211",
+        "lastCheckup": "2024-02-15",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-05-15",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-08-20",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Booster",
+            "date": "2022-01-15",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "Flu Shot",
+            "date": "2024-01-10",
+            "manufacturer": "Serum Institute"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Type 2 Diabetes",
+            "diagnosedDate": "2019-03-15",
+            "status": "Ongoing",
+            "medications": ["Metformin 500mg", "Glimepiride 1mg"]
+          },
+          {
+            "condition": "Hypertension",
+            "diagnosedDate": "2020-06-20",
+            "status": "Ongoing",
+            "medications": ["Amlodipine 5mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-02-15",
+            "doctor": "Dr. Rajesh Kumar",
+            "hospital": "City Hospital",
+            "reason": "Regular Checkup",
+            "prescription": ["Metformin 500mg", "Amlodipine 5mg"],
+            "followUp": "2024-05-15"
+          },
+          {
+            "date": "2023-12-10",
+            "doctor": "Dr. Priya Singh",
+            "hospital": "Apex Medical Center",
+            "reason": "Fever",
+            "prescription": ["Paracetamol 500mg", "Azithromycin 500mg"],
+            "followUp": null
+          }
+        ],
+        "allergies": ["Penicillin"],
+        "bloodPressure": {
+          "lastReading": "130/85",
+          "date": "2024-02-15"
+        },
+        "bloodSugar": {
+          "fasting": "126",
+          "postPrandial": "180",
+          "date": "2024-02-15"
+        }
+      },
+      {
+        "id": "PRG002",
+        "name": "Priya Patel",
+        "age": 28,
+        "gender": "female",
+        "bloodGroup": "O+",
+        "contact": "+91-9876543212",
+        "address": "45 Georgetown, Prayagraj",
+        "occupation": "Software Engineer",
+        "emergencyContact": "+91-9876543213",
+        "lastCheckup": "2024-01-20",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-06-10",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-09-15",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "HPV",
+            "date": "2020-03-15",
+            "manufacturer": "Gardasil"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Asthma",
+            "diagnosedDate": "2015-05-10",
+            "status": "Controlled",
+            "medications": ["Salbutamol Inhaler"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-01-20",
+            "doctor": "Dr. Anjali Gupta",
+            "hospital": "City Hospital",
+            "reason": "Annual Checkup",
+            "prescription": ["Salbutamol Inhaler"],
+            "followUp": "2024-07-20"
+          }
+        ],
+        "allergies": ["Dust", "Pollen"],
+        "bloodPressure": {
+          "lastReading": "118/75",
+          "date": "2024-01-20"
+        },
+        "bloodSugar": {
+          "fasting": "95",
+          "postPrandial": "120",
+          "date": "2024-01-20"
+        }
+      },
+      {
+        "id": "PRG001",
+        "name": "Aditya Sharma",
+        "age": 45,
+        "gender": "male",
+        "bloodGroup": "B+",
+        "contact": "+91-9876543210",
+        "address": "123 Civil Lines, Prayagraj",
+        "occupation": "Teacher",
+        "emergencyContact": "+91-9876543211",
+        "lastCheckup": "2024-02-15",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-05-15",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-08-20",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Booster",
+            "date": "2022-01-15",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "Flu Shot",
+            "date": "2024-01-10",
+            "manufacturer": "Serum Institute"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Type 2 Diabetes",
+            "diagnosedDate": "2019-03-15",
+            "status": "Ongoing",
+            "medications": ["Metformin 500mg", "Glimepiride 1mg"]
+          },
+          {
+            "condition": "Hypertension",
+            "diagnosedDate": "2020-06-20",
+            "status": "Ongoing",
+            "medications": ["Amlodipine 5mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-02-15",
+            "doctor": "Dr. Rajesh Kumar",
+            "hospital": "City Hospital",
+            "reason": "Regular Checkup",
+            "prescription": ["Metformin 500mg", "Amlodipine 5mg"],
+            "followUp": "2024-05-15"
+          },
+          {
+            "date": "2023-12-10",
+            "doctor": "Dr. Priya Singh",
+            "hospital": "Apex Medical Center",
+            "reason": "Fever",
+            "prescription": ["Paracetamol 500mg", "Azithromycin 500mg"],
+            "followUp": null
+          }
+        ],
+        "allergies": ["Penicillin"],
+        "bloodPressure": {
+          "lastReading": "130/85",
+          "date": "2024-02-15"
+        },
+        "bloodSugar": {
+          "fasting": "126",
+          "postPrandial": "180",
+          "date": "2024-02-15"
+        }
+      },
+      {
+        "id": "PRG002",
+        "name": "Meera Singh",
+        "age": 50,
+        "gender": "female",
+        "bloodGroup": "O+",
+        "contact": "+91-9876543212",
+        "address": "56 MG Road, Varanasi",
+        "occupation": "Bank Manager",
+        "emergencyContact": "+91-9876543213",
+        "lastCheckup": "2023-11-12",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-04-10",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-07-12",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Asthma",
+            "diagnosedDate": "2015-09-10",
+            "status": "Ongoing",
+            "medications": ["Salbutamol Inhaler"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2023-11-12",
+            "doctor": "Dr. Nisha Gupta",
+            "hospital": "City Hospital",
+            "reason": "Breathing Issues",
+            "prescription": ["Salbutamol Inhaler"],
+            "followUp": "2024-02-12"
+          }
+        ],
+        "allergies": ["Dust", "Pollen"],
+        "bloodPressure": {
+          "lastReading": "120/80",
+          "date": "2023-11-12"
+        },
+        "bloodSugar": {
+          "fasting": "90",
+          "postPrandial": "120",
+          "date": "2023-11-12"
+        }
+      },
+      {
+        "id": "PRG003",
+        "name": "Rohit Verma",
+        "age": 38,
+        "gender": "male",
+        "bloodGroup": "A+",
+        "contact": "+91-9876543214",
+        "address": "22 Ashok Nagar, Lucknow",
+        "occupation": "Software Engineer",
+        "emergencyContact": "+91-9876543215",
+        "lastCheckup": "2024-01-20",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-03-15",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-06-20",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Hypertension",
+            "diagnosedDate": "2020-08-12",
+            "status": "Ongoing",
+            "medications": ["Amlodipine 5mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-01-20",
+            "doctor": "Dr. Sanjay Kapoor",
+            "hospital": "Medicare Hospital",
+            "reason": "High BP",
+            "prescription": ["Amlodipine 5mg"],
+            "followUp": "2024-04-20"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "140/90",
+          "date": "2024-01-20"
+        },
+        "bloodSugar": {
+          "fasting": "100",
+          "postPrandial": "130",
+          "date": "2024-01-20"
+        }
+      },
+      {
+        "id": "PRG004",
+        "name": "Kiran Patel",
+        "age": 60,
+        "gender": "female",
+        "bloodGroup": "B+",
+        "contact": "+91-9876543216",
+        "address": "78 Lal Bagh, Kanpur",
+        "occupation": "Retired",
+        "emergencyContact": "+91-9876543217",
+        "lastCheckup": "2023-10-15",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-04-18",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-07-22",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "Flu Shot",
+            "date": "2023-11-10",
+            "manufacturer": "Serum Institute"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Osteoarthritis",
+            "diagnosedDate": "2018-05-20",
+            "status": "Ongoing",
+            "medications": ["Paracetamol 500mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2023-10-15",
+            "doctor": "Dr. Suresh Jain",
+            "hospital": "City Hospital",
+            "reason": "Joint Pain",
+            "prescription": ["Paracetamol 500mg"],
+            "followUp": "2024-01-15"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "120/80",
+          "date": "2023-10-15"
+        },
+        "bloodSugar": {
+          "fasting": "110",
+          "postPrandial": "140",
+          "date": "2023-10-15"
+        }
+      },
+      {
+        "id": "PRG005",
+        "name": "Anil Kumar",
+        "age": 55,
+        "gender": "male",
+        "bloodGroup": "AB+",
+        "contact": "+91-9876543218",
+        "address": "90 Nehru Nagar, Agra",
+        "occupation": "Businessman",
+        "emergencyContact": "+91-9876543219",
+        "lastCheckup": "2024-03-10",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-05-05",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-08-08",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Cholesterol",
+            "diagnosedDate": "2022-01-15",
+            "status": "Ongoing",
+            "medications": ["Atorvastatin 10mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-03-10",
+            "doctor": "Dr. Anita Mehta",
+            "hospital": "Sunrise Hospital",
+            "reason": "Cholesterol Management",
+            "prescription": ["Atorvastatin 10mg"],
+            "followUp": "2024-06-10"
+          }
+        ],
+        "allergies": ["Shellfish"],
+        "bloodPressure": {
+          "lastReading": "130/85",
+          "date": "2024-03-10"
+        },
+        "bloodSugar": {
+          "fasting": "105",
+          "postPrandial": "140",
+          "date": "2024-03-10"
+        }
+      },
+      {
+        "id": "PRG006",
+        "name": "Divya Joshi",
+        "age": 29,
+        "gender": "female",
+        "bloodGroup": "O-",
+        "contact": "+91-9876543220",
+        "address": "65 Gomti Nagar, Lucknow",
+        "occupation": "Designer",
+        "emergencyContact": "+91-9876543221",
+        "lastCheckup": "2023-09-18",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-03-20",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-06-22",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [],
+        "recentVisits": [
+          {
+            "date": "2023-09-18",
+            "doctor": "Dr. Prakash Chawla",
+            "hospital": "Rainbow Hospital",
+            "reason": "Regular Checkup",
+            "prescription": ["Multivitamins"],
+            "followUp": "2024-03-18"
+          }
+        ],
+        "allergies": ["Peanuts"],
+        "bloodPressure": {
+          "lastReading": "110/70",
+          "date": "2023-09-18"
+        },
+        "bloodSugar": {
+          "fasting": "85",
+          "postPrandial": "110",
+          "date": "2023-09-18"
+        }
+      },
+      {
+        "id": "PRG007",
+        "name": "Pooja Mehta",
+        "age": 34,
+        "gender": "female",
+        "bloodGroup": "A-",
+        "contact": "+91-9876543222",
+        "address": "11 Rajendra Nagar, Ghaziabad",
+        "occupation": "Lawyer",
+        "emergencyContact": "+91-9876543223",
+        "lastCheckup": "2023-12-05",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-04-25",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-07-28",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Migraine",
+            "diagnosedDate": "2019-05-22",
+            "status": "Ongoing",
+            "medications": ["Sumatriptan 100mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2023-12-05",
+            "doctor": "Dr. Shalini Tiwari",
+            "hospital": "City Hospital",
+            "reason": "Migraine Attack",
+            "prescription": ["Sumatriptan 100mg"],
+            "followUp": "2024-03-05"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "115/75",
+          "date": "2023-12-05"
+        },
+        "bloodSugar": {
+          "fasting": "90",
+          "postPrandial": "120",
+          "date": "2023-12-05"
+        }
+      },
+      {
+        "id": "PRG008",
+        "name": "Rajesh Yadav",
+        "age": 42,
+        "gender": "male",
+        "bloodGroup": "B-",
+        "contact": "+91-9876543224",
+        "address": "45 Raja Garden, Bareilly",
+        "occupation": "Farmer",
+        "emergencyContact": "+91-9876543225",
+        "lastCheckup": "2024-02-01",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-06-05",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-09-08",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Gout",
+            "diagnosedDate": "2022-08-15",
+            "status": "Ongoing",
+            "medications": ["Allopurinol 300mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-02-01",
+            "doctor": "Dr. Akash Singh",
+            "hospital": "Sunshine Hospital",
+            "reason": "Gout Flare-up",
+            "prescription": ["Allopurinol 300mg"],
+            "followUp": "2024-05-01"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "120/80",
+          "date": "2024-02-01"
+        },
+        "bloodSugar": {
+          "fasting": "95",
+          "postPrandial": "125",
+          "date": "2024-02-01"
+        }
+      },
+      {
+        "id": "PRG009",
+        "name": "Alok Pandey",
+        "age": 65,
+        "gender": "male",
+        "bloodGroup": "AB-",
+        "contact": "+91-9876543226",
+        "address": "30 Shastri Nagar, Meerut",
+        "occupation": "Retired",
+        "emergencyContact": "+91-9876543227",
+        "lastCheckup": "2023-10-25",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-05-20",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-08-22",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "COPD",
+            "diagnosedDate": "2020-12-01",
+            "status": "Ongoing",
+            "medications": ["Tiotropium Inhaler"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2023-10-25",
+            "doctor": "Dr. Manish Kumar",
+            "hospital": "LifeCare Hospital",
+            "reason": "COPD Checkup",
+            "prescription": ["Tiotropium Inhaler"],
+            "followUp": "2024-01-25"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "110/70",
+          "date": "2023-10-25"
+        },
+        "bloodSugar": {
+          "fasting": "90",
+          "postPrandial": "120",
+          "date": "2023-10-25"
+        }
+      },
+      {
+        "id": "PRG010",
+        "name": "Neha Kapoor",
+        "age": 27,
+        "gender": "female",
+        "bloodGroup": "A+",
+        "contact": "+91-9876543228",
+        "address": "67 Rajendra Place, Delhi",
+        "occupation": "Software Engineer",
+        "emergencyContact": "+91-9876543229",
+        "lastCheckup": "2023-11-20",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-05-10",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-08-12",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [],
+        "recentVisits": [
+          {
+            "date": "2023-11-20",
+            "doctor": "Dr. Kiran Desai",
+            "hospital": "Apollo Hospital",
+            "reason": "Fever",
+            "prescription": ["Paracetamol 500mg"],
+            "followUp": null
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "120/80",
+          "date": "2023-11-20"
+        },
+        "bloodSugar": {
+          "fasting": "95",
+          "postPrandial": "125",
+          "date": "2023-11-20"
+        }
+      },
+      {
+        "id": "PRG011",
+        "name": "Suresh Kumar",
+        "age": 48,
+        "gender": "male",
+        "bloodGroup": "B+",
+        "contact": "+91-9876543230",
+        "address": "22 Moti Bagh, New Delhi",
+        "occupation": "Accountant",
+        "emergencyContact": "+91-9876543231",
+        "lastCheckup": "2024-01-05",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-05-30",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-08-15",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Hypertension",
+            "diagnosedDate": "2018-11-15",
+            "status": "Ongoing",
+            "medications": ["Amlodipine 5mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-01-05",
+            "doctor": "Dr. Rohit Verma",
+            "hospital": "Max Hospital",
+            "reason": "Hypertension Check-up",
+            "prescription": ["Amlodipine 5mg"],
+            "followUp": "2024-04-05"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "135/85",
+          "date": "2024-01-05"
+        },
+        "bloodSugar": {
+          "fasting": "100",
+          "postPrandial": "130",
+          "date": "2024-01-05"
+        }
+      },
+      {
+        "id": "PRG012",
+        "name": "Meera Sharma",
+        "age": 37,
+        "gender": "female",
+        "bloodGroup": "A+",
+        "contact": "+91-9876543232",
+        "address": "14 MG Road, Bengaluru",
+        "occupation": "Architect",
+        "emergencyContact": "+91-9876543233",
+        "lastCheckup": "2024-03-12",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-04-10",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-07-12",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [],
+        "recentVisits": [
+          {
+            "date": "2024-03-12",
+            "doctor": "Dr. Nandini Rao",
+            "hospital": "Fortis Hospital",
+            "reason": "Annual Checkup",
+            "prescription": ["Multivitamins"],
+            "followUp": "2025-03-12"
+          }
+        ],
+        "allergies": ["Pollen"],
+        "bloodPressure": {
+          "lastReading": "120/75",
+          "date": "2024-03-12"
+        },
+        "bloodSugar": {
+          "fasting": "95",
+          "postPrandial": "115",
+          "date": "2024-03-12"
+        }
+      },
+      {
+        "id": "PRG013",
+        "name": "Amit Patel",
+        "age": 52,
+        "gender": "male",
+        "bloodGroup": "O+",
+        "contact": "+91-9876543234",
+        "address": "9 Ring Road, Surat",
+        "occupation": "Businessman",
+        "emergencyContact": "+91-9876543235",
+        "lastCheckup": "2024-04-20",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-06-15",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-09-17",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Diabetes",
+            "diagnosedDate": "2021-01-10",
+            "status": "Ongoing",
+            "medications": ["Metformin 500mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-04-20",
+            "doctor": "Dr. Harish Desai",
+            "hospital": "Global Hospital",
+            "reason": "Diabetes Check-up",
+            "prescription": ["Metformin 500mg"],
+            "followUp": "2024-07-20"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "125/80",
+          "date": "2024-04-20"
+        },
+        "bloodSugar": {
+          "fasting": "110",
+          "postPrandial": "145",
+          "date": "2024-04-20"
+        }
+      },
+      {
+        "id": "PRG014",
+        "name": "Sneha Deshmukh",
+        "age": 30,
+        "gender": "female",
+        "bloodGroup": "B-",
+        "contact": "+91-9876543236",
+        "address": "18 Baner Road, Pune",
+        "occupation": "Data Scientist",
+        "emergencyContact": "+91-9876543237",
+        "lastCheckup": "2023-12-10",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-03-25",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-06-30",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [],
+        "recentVisits": [
+          {
+            "date": "2023-12-10",
+            "doctor": "Dr. Shilpa Kale",
+            "hospital": "Ruby Hall Clinic",
+            "reason": "Fever",
+            "prescription": ["Paracetamol 500mg"],
+            "followUp": "2024-03-10"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "115/70",
+          "date": "2023-12-10"
+        },
+        "bloodSugar": {
+          "fasting": "90",
+          "postPrandial": "110",
+          "date": "2023-12-10"
+        }
+      },
+      {
+        "id": "PRG015",
+        "name": "Rohit Verma",
+        "age": 45,
+        "gender": "male",
+        "bloodGroup": "AB+",
+        "contact": "+91-9876543238",
+        "address": "23 Lajpat Nagar, Delhi",
+        "occupation": "Teacher",
+        "emergencyContact": "+91-9876543239",
+        "lastCheckup": "2024-01-30",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-04-15",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-07-17",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Asthma",
+            "diagnosedDate": "2010-09-20",
+            "status": "Ongoing",
+            "medications": ["Salbutamol Inhaler"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-01-30",
+            "doctor": "Dr. Anjali Gupta",
+            "hospital": "AIIMS",
+            "reason": "Asthma Management",
+            "prescription": ["Salbutamol Inhaler"],
+            "followUp": "2024-04-30"
+          }
+        ],
+        "allergies": ["Dust"],
+        "bloodPressure": {
+          "lastReading": "120/80",
+          "date": "2024-01-30"
+        },
+        "bloodSugar": {
+          "fasting": "100",
+          "postPrandial": "130",
+          "date": "2024-01-30"
+        }
+      },
+      {
+        "id": "PRG016",
+        "name": "Sunita Reddy",
+        "age": 28,
+        "gender": "female",
+        "bloodGroup": "O+",
+        "contact": "+91-9876543240",
+        "address": "12 Banjara Hills, Hyderabad",
+        "occupation": "HR Manager",
+        "emergencyContact": "+91-9876543241",
+        "lastCheckup": "2024-02-15",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-04-05",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-07-07",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [],
+        "recentVisits": [
+          {
+            "date": "2024-02-15",
+            "doctor": "Dr. Rajesh Kumar",
+            "hospital": "Apollo Hospitals",
+            "reason": "Routine Check-up",
+            "prescription": ["Multivitamins"],
+            "followUp": "2025-02-15"
+          }
+        ],
+        "allergies": ["Penicillin"],
+        "bloodPressure": {
+          "lastReading": "110/70",
+          "date": "2024-02-15"
+        },
+        "bloodSugar": {
+          "fasting": "85",
+          "postPrandial": "105",
+          "date": "2024-02-15"
+        }
+      },
+      {
+        "id": "PRG017",
+        "name": "Vikas Singh",
+        "age": 40,
+        "gender": "male",
+        "bloodGroup": "B+",
+        "contact": "+91-9876543242",
+        "address": "34 Civil Lines, Jaipur",
+        "occupation": "Engineer",
+        "emergencyContact": "+91-9876543243",
+        "lastCheckup": "2024-05-10",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-06-20",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-09-22",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Hypertension",
+            "diagnosedDate": "2022-03-15",
+            "status": "Ongoing",
+            "medications": ["Lisinopril 10mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-05-10",
+            "doctor": "Dr. Sunil Jain",
+            "hospital": "SMS Hospital",
+            "reason": "Hypertension Management",
+            "prescription": ["Lisinopril 10mg"],
+            "followUp": "2024-08-10"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "130/85",
+          "date": "2024-05-10"
+        },
+        "bloodSugar": {
+          "fasting": "105",
+          "postPrandial": "140",
+          "date": "2024-05-10"
+        }
+      },
+      {
+        "id": "PRG018",
+        "name": "Anita Bhatia",
+        "age": 42,
+        "gender": "female",
+        "bloodGroup": "A-",
+        "contact": "+91-9876543244",
+        "address": "6 Lodhi Estate, Delhi",
+        "occupation": "Journalist",
+        "emergencyContact": "+91-9876543245",
+        "lastCheckup": "2024-06-20",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-07-01",
+            "manufacturer": "Covaxin"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-09-30",
+            "manufacturer": "Covaxin"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Thyroid Disorder",
+            "diagnosedDate": "2019-05-10",
+            "status": "Ongoing",
+            "medications": ["Levothyroxine 75mcg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-06-20",
+            "doctor": "Dr. Kavita Mehra",
+            "hospital": "Sir Ganga Ram Hospital",
+            "reason": "Thyroid Check-up",
+            "prescription": ["Levothyroxine 75mcg"],
+            "followUp": "2024-09-20"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "120/80",
+          "date": "2024-06-20"
+        },
+        "bloodSugar": {
+          "fasting": "100",
+          "postPrandial": "130",
+          "date": "2024-06-20"
+        }
+      },
+      {
+        "id": "PRG019",
+        "name": "Manoj Gupta",
+        "age": 54,
+        "gender": "male",
+        "bloodGroup": "B-",
+        "contact": "+91-9876543246",
+        "address": "12 Green Park, Delhi",
+        "occupation": "Bank Manager",
+        "emergencyContact": "+91-9876543247",
+        "lastCheckup": "2024-07-15",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-05-01",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-08-05",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [
+          {
+            "condition": "Cholesterol",
+            "diagnosedDate": "2017-10-05",
+            "status": "Ongoing",
+            "medications": ["Atorvastatin 20mg"]
+          }
+        ],
+        "recentVisits": [
+          {
+            "date": "2024-07-15",
+            "doctor": "Dr. Arvind Malhotra",
+            "hospital": "Max Hospital",
+            "reason": "Cholesterol Management",
+            "prescription": ["Atorvastatin 20mg"],
+            "followUp": "2024-10-15"
+          }
+        ],
+        "allergies": ["None"],
+        "bloodPressure": {
+          "lastReading": "125/85",
+          "date": "2024-07-15"
+        },
+        "bloodSugar": {
+          "fasting": "105",
+          "postPrandial": "135",
+          "date": "2024-07-15"
+        }
+      },
+      {
+        "id": "PRG020",
+        "name": "Divya Iyer",
+        "age": 32,
+        "gender": "female",
+        "bloodGroup": "AB+",
+        "contact": "+91-9876543248",
+        "address": "10 Race Course Road, Bangalore",
+        "occupation": "Software Developer",
+        "emergencyContact": "+91-9876543249",
+        "lastCheckup": "2024-08-05",
+        "vaccinations": [
+          {
+            "name": "COVID-19 First Dose",
+            "date": "2021-06-01",
+            "manufacturer": "Covishield"
+          },
+          {
+            "name": "COVID-19 Second Dose",
+            "date": "2021-09-01",
+            "manufacturer": "Covishield"
+          }
+        ],
+        "medicalHistory": [],
+        "recentVisits": [
+          {
+            "date": "2024-08-05",
+            "doctor": "Dr. Sneha Rao",
+            "hospital": "Manipal Hospital",
+            "reason": "Routine Check-up",
+            "prescription": ["Multivitamins"],
+            "followUp": "2025-08-05"
+          }
+        ],
+        "allergies": ["Peanuts"],
+        "bloodPressure": {
+          "lastReading": "115/75",
+          "date": "2024-08-05"
+        },
+        "bloodSugar": {
+          "fasting": "90",
+          "postPrandial": "120",
+          "date": "2024-08-05"
+        }
+      }
+    ],
+    "metadata": {
+      "totalCitizens": 100,
+      "lastUpdated": "2024-03-15",
+      "region": "Prayagraj",
+      "ageDistribution": {
+        "0-18": 15,
+        "19-30": 25,
+        "31-50": 35,
+        "51-70": 20,
+        "70+": 5
+      },
+      "commonConditions": [
+        {
+          "name": "Hypertension",
+          "count": 28
+        },
+        {
+          "name": "Diabetes",
+          "count": 22
+        },
+        {
+          "name": "Asthma",
+          "count": 15
+        },
+        {
+          "name": "Arthritis",
+          "count": 12
+        },
+        {
+          "name": "Thyroid Disorders",
+          "count": 10
+        }
+      ],
+      "vaccinationStats": {
+        "covidFirstDose": 95,
+        "covidSecondDose": 92,
+        "covidBooster": 45,
+        "fluShot": 38,
+        "hpv": 15
+      },
+      "hospitalVisitFrequency": {
+        "weekly": 12,
+        "monthly": 45,
+        "quarterly": 30,
+        "annually": 13
+      },
+      "genderDistribution": {
+        "male": 52,
+        "female": 47,
+        "other": 1
+      },
+      "bloodGroupDistribution": {
+        "A+": 28,
+        "A-": 5,
+        "B+": 32,
+        "B-": 4,
+        "O+": 21,
+        "O-": 3,
+        "AB+": 6,
+        "AB-": 1
+      }
+    }
+  }

@@ -1,0 +1,158 @@
+/* Chatbox container */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 400px;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.chatbot-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chatbot-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.chatbot-header button:hover {
+  color: red;
+}
+
+/* Message container */
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+/* Generic chat bubble styles */
+.message {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for chat bubbles */
+  max-width: 75%; /* Adjust to max width */
+  display: block; /* Each message will take a full line */
+  word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+/* User's message (blue bubble) */
+.message.user {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end; /* Align to the right */
+  text-align: right;
+  border-radius: 12px 12px 0 12px;
+  margin-left: auto;
+  margin-bottom: 15px; /* Space after user message */
+  margin-right: 0;
+  max-width: 45%; /* Make the blue bubble smaller */
+}
+
+/* Bot's message (white bubble) */
+.message.bot {
+  background-color: #f1f1f1;
+  color: black;
+  align-self: flex-start; /* Align to the left */
+  text-align: left;
+  border-radius: 12px 12px 12px 0;
+  margin-top: 15px; /* Space before bot message */
+}
+
+/* Chat input */
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chatbot-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chatbot-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Options for the mode selection */
+.options {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.option-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the doctor chat message */
+.doctor-chatbox {
+  padding: 20px;
+  font-style: italic;
+  color: #333;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Share button styling */
+.share-conversation-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.share-conversation-button:hover {
+  background-color: #1EBE5F; /* Darker green on hover */
+}
+

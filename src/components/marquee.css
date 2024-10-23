@@ -1,0 +1,31 @@
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background: #3b82f6; /* Blue-600 background */
+  width: 100%; /* Full width */
+  padding: 10px 0; /* Add some padding for aesthetics */
+}
+
+.marquee-content {
+  display: inline-block;
+  /* The width of the content should be more than the width of the marquee to enable scrolling */
+  padding-left: 100%; /* Start padding to make the animation smoother */
+  animation: marquee 25s linear infinite; /* Adjust the duration for speed */
+  color: #ffffff; /* White text color */
+  font-weight: bold; /* Make the text bold */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Start from the left edge of the marquee */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left edge of the content */
+  }
+}
+
+/* Additional styles for spacing after each icon */
+.marquee-content span {
+  margin-right: 1rem; /* Space after each icon and text */
+}

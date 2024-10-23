@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100;
+}
+#slider-boxes {
+  display: flex !important;
+}
+.slick-slider {
+  position: relative;
+}
+.slick-slide div {
+  margin: 10px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: blue !important;
+  font-size: 30px !important;
+}
+
+/* Mobile adjustments for smaller screens */
+@media (max-width: 600px) {
+  .slick-prev,
+  .slick-next {
+    top: 100%; /* Keeps arrows below the slider */
+    font-size: 24px; /* Smaller arrow size */
+  }
+
+  .slick-prev {
+    right: 60px; /* Adjust for smaller screens */
+  }
+
+  .slick-next {
+    right: 20px; /* Adjust for smaller screens */
+  }
+}
