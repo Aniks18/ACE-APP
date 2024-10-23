@@ -7,35 +7,40 @@
 
 .toggle-button {
   background-color: #007bff;
-  color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 10px; /* Reduced padding to make the button smaller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular button */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 60px;  /* Reduced width */
+  height: 60px; /* Reduced height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .toggle-button:hover {
-  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+.robot-logo {
+  width: 40px;  /* Reduced image size */
+  height: 40px; /* Reduced image size */
+  border-radius: 50%;
 }
 
 .chatbot-wrapper {
   position: fixed;
   bottom: 0;
-  right: 0; /* Align to right edge */
-  width: 100%; /* Full width on small screens */
-  max-width: 400px; /* Max width for larger screens */
+  right: 20px;
+  width: 400px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
+  transition: max-height 0.5s ease;
 }
-
 .chatbot-wrapper.open {
-  max-height: 90%; /* Use 90% height on small screens */
-  opacity: 1;
+  max-height: 600px;
 }
-
 .chatbot-wrapper.closed {
   max-height: 0;
-  opacity: 0;
 }
