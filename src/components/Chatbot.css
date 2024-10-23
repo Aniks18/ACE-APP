@@ -67,7 +67,8 @@
   text-align: right;
   border-radius: 12px 12px 0 12px;
   margin-left: auto;
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Space after user message */
+  margin-right: 0;
   max-width: 45%; /* Make the blue bubble smaller */
 }
 
