@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Chatbot from './Chatbot';
-import './ChatbotToggle.css'; // Ensure the updated styles are used
-import robotIcon from '../images/robot.png'; // Import the robot image
+import './ChatbotToggle.css'; // Add a new CSS file for toggle animation
 
 const ChatbotToggle = () => {
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
@@ -13,7 +12,7 @@ const ChatbotToggle = () => {
   return (
     <div className="chatbot-toggle">
       <button onClick={toggleChatbot} className="toggle-button">
-        <img src={robotIcon} alt="Chatbot" className="robot-logo" />
+        💬 Chat with us
       </button>
       <div className={`chatbot-wrapper ${isChatbotOpen ? 'open' : 'closed'}`}>
         {isChatbotOpen && <Chatbot onClose={toggleChatbot} />}
