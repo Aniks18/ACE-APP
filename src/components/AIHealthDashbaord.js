@@ -10,11 +10,13 @@ import {
   Calendar, Brain
 } from 'lucide-react';
 
+import {useNavigate} from "react-router-dom";
+
 const COLORS = ['#ff7c43', '#00b4d8', '#023e8a', '#0077b6', '#48cae4', '#90e0ef'];
 
 const AIHealthDashboard = ({ healthCardData }) => {
   const [timeRange, setTimeRange] = useState('7days');
-
+  const navigate = useNavigate();
   const statsData = useMemo(() => {
     // Enhanced stats calculation using metadata
     return {
@@ -77,6 +79,10 @@ const AIHealthDashboard = ({ healthCardData }) => {
     { name: 'Flu Shot', value: statsData.vaccinations.fluShot }
   ];
 
+    const handleMentalBotNavigation = () => {
+    navigate('../Mentalbot'); // Navigate to mentalbot.js page
+  };
+
   return (
     <div className="p-6 bg-gray-50 min-h-screen">
       {/* Header Section */}
@@ -136,6 +142,16 @@ const AIHealthDashboard = ({ healthCardData }) => {
           subtitle="Fully vaccinated"
           color="#059669"
         />
+      </div>
+
+      {/* Mental Bot Button */}
+      <div className="flex justify-end mb-6">
+        <button
+          onClick={handleMentalBotNavigation}
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all"
+        >
+          Mental Bot
+        </button>
       </div>
 
       {/* Secondary Stats Grid */}
